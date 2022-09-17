@@ -1,0 +1,113 @@
+
+ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+title = Instance.new("TextLabel")
+pla = Instance.new("TextBox")
+attac = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.290196, 0.290196, 0.290196)
+main.BackgroundTransparency = 0.15000000596046
+main.Position = UDim2.new(0.67978394, 0, 0.479141831, 0)
+main.Size = UDim2.new(0, 367, 0, 218)
+main.Active = true
+main.Draggable = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.new(1, 1, 1)
+title.BackgroundTransparency = 1
+title.Size = UDim2.new(0, 354, 0, 50)
+title.Font = Enum.Font.GothamBold
+title.FontSize = Enum.FontSize.Size32
+title.Text = "Punish Gui"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.TextSize = 30
+title.TextStrokeTransparency = 0
+
+
+pla.Name = "pla"
+pla.Parent = main
+pla.BackgroundColor3 = Color3.new(0.317647, 0.317647, 0.317647)
+pla.BackgroundTransparency = 0.5
+pla.Position = UDim2.new(0.209809259, 0, 0.38532111, 0)
+pla.Size = UDim2.new(0, 200, 0, 50)
+pla.Font = Enum.Font.SourceSans
+pla.FontSize = Enum.FontSize.Size14
+pla.Text = ""
+pla.TextColor3 = Color3.new(0, 0, 0)
+pla.TextSize = 14
+
+attac.Name = "attac"
+attac.Parent = main
+attac.BackgroundColor3 = Color3.new(0.231373, 0.231373, 0.231373)
+attac.BackgroundTransparency = 0.34999999403954
+attac.Position = UDim2.new(0.256130785, 0, 0.655963302, 0)
+attac.Size = UDim2.new(0, 166, 0, 44)
+attac.Font = Enum.Font.SourceSans
+attac.FontSize = Enum.FontSize.Size14
+attac.Text = "Punish"
+attac.TextColor3 = Color3.new(1, 1, 1)
+attac.TextSize = 14
+attac.TextStrokeTransparency = 0
+attac.MouseButton1Down:connect(function()
+
+Target = pla.Text
+
+game.Players.LocalPlayer.Character.Humanoid.Name = 1
+local l = game.Players.LocalPlayer.Character["1"]:Clone()
+l.Parent = game.Players.LocalPlayer.Character
+l.Name = "Humanoid"
+wait()
+game.Players.LocalPlayer.Character["1"]:Destroy()
+game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+wait()
+game.Players.LocalPlayer.Character.Animate.Disabled = false
+game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+end
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.HumanoidRootPart.CFrame
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.HumanoidRootPart.CFrame
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-100000,1000000000,-100000))
+wait()
+local prt=Instance.new("Model", workspace);
+Instance.new("Part", prt).Name="Torso";
+Instance.new("Part", prt).Name="Head";
+Instance.new("Humanoid", prt).Name="Humanoid";
+game.Players.LocalPlayer.Character=prt
+end)
+while wait() do
+title.TextColor3 = Color3.new(1,0,0)
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r,title.TextColor3.g+(17/255),title.TextColor3.b)
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r-(17/255),title.TextColor3.g,title.TextColor3.b)
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r,title.TextColor3.g,title.TextColor3.b+(17/255))
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r,title.TextColor3.g-(17/255),title.TextColor3.b)
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r+(17/255),title.TextColor3.g,title.TextColor3.b)
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r,title.TextColor3.g,title.TextColor3.b-(17/255))
+end
+end
