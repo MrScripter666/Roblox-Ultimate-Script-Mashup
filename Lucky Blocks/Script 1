@@ -1,0 +1,2 @@
+-- Script developer: TheBloxGuyYT --
+loadstring(game:HttpGet('https://raw.githubusercontent.com/artas01/artas01/main/lucky'))()
