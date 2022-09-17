@@ -1,0 +1,69 @@
+Memes = {	
+	47594659,
+	342697845,
+    74142203,
+    60298055,
+    48989071,
+    63175216,
+    63186465,
+    45120559,
+    62079221,
+    48258623,
+    62677682,
+    63174888,
+    47595647,
+    62830600,
+    53646377,
+    62677045,
+    48260066,
+    47596170,
+    48293007,
+    53645378,
+    48290678,
+    53646388,
+    45031979,
+    74885351,
+    278201073,
+}
+Player = game.Players.LocalPlayer
+repeat wait() until Player.Character
+Character = Player.Character
+MEME = 47594659
+MAX = #Memes
+AT = 1
+Billboard = Instance.new("BillboardGui", Character.Head)
+Image = Instance.new("ImageLabel", Billboard)
+Billboard.AlwaysOnTop = true
+Billboard.Adornee = Character.Head
+Billboard.Size = UDim2.new(1, 0, 1,0)
+Image.BackgroundTransparency = 1
+Image.Position = UDim2.new(-2, 0,-2, 0)
+Image.Size = UDim2.new(5, 0, 4, 0)
+s = Instance.new("ScreenGui", Player.PlayerGui)
+f = Instance.new("Frame", s)
+b = Instance.new("TextButton", f)
+il = Instance.new("ImageLabel", f)
+f.Position = UDim2.new(0.8, 0, 0.6, 0)
+f.Size = UDim2.new(0.2, 0, 0.3, 0)
+b.Position = UDim2.new(0, 0, 0.9, 0)
+b.Size = UDim2.new(1, 0, 0.1, 0)
+b.Style = "RobloxRoundDropdownButton"
+b.Font = "Legacy"
+b.Text = "Next > "
+il.Size = UDim2.new(1, 0, 0.9, 0)
+il.Image = "rbxassetid://"..MEME
+b.MouseButton1Down:connect(function()
+	MEME = Memes[AT]
+	if AT >= MAX then
+		AT = 1
+	else
+		AT = AT+1
+	end
+end)
+coroutine.wrap(function()
+	repeat
+		il.Image = "rbxassetid://"..MEME
+		Image.Image = "rbxassetid://"..MEME
+		wait()
+	until Player.Character.Humanoid.Health == 0
+end)()
