@@ -1,0 +1,13 @@
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("Accessory") then
+        if v.Handle:FindFirstChildOfClass("Mesh") or v.Handle:FindFirstChildOfClass("SpecialMesh") then
+            if v.Handle:FindFirstChildOfClass("SpecialMesh") then
+                v.Handle:FindFirstChildOfClass("SpecialMesh"):Remove()
+            end
+        end
+    end
+end
+
+local A_1 = "{All Hats Have Been Meshified!}" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+wait(0.1)
+local A_1 = "{Reset to Return to Normal.}" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
