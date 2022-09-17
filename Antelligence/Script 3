@@ -1,0 +1,2 @@
+getgenv().SpeedFly_ = 0.1
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Hosvile/The-telligence/main/MC%3AFly%20v0.0.3'),true))()
