@@ -1,0 +1,1 @@
+loadstring(game:HttpGet(('https://github.com/MarsQQ/ScriptHubScripts/blob/master/MM2Autofarm'),true))()
