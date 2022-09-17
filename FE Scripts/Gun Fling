@@ -1,0 +1,6 @@
+--MADE BY Redmoon--
+--Items:
+clickfling = true -- set this to false if u dont want click fling or use torso fling
+
+function rmesh(a)
+if not (workspace[game.Players.LocalPlayer.Name][a].Handle:FindFirstChild('Mesh') or workspace[game.Players.LocalPlayer.Name][a].Handle:FindFirstChild('SpecialMesh')) then return end
