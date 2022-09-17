@@ -1,0 +1,49 @@
+local hungerEnabled
+local energyEnabled
+local Player = game.Players.LocalPlayer
+local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
+
+local window = library:CreateWindow("De Pride Isle")
+
+local F1 = window:CreateFolder("Abilities")
+local F2 = window:CreateFolder("Teleports")
+local F3 = window:CreateFolder("Misc")
+F1:Toggle("Unlimited Hunger",function(bool)
+    hungerEnabled = bool
+end)
+F1:Toggle("Unlimited Energy",function(bool)
+    energyEnabled = bool
+end)
+
+F1:Button("Activate Ragdoll",function()
+    fireclickdetector(game.Workspace.TestBase.ActivateRagdoll.CD)
+end)
+
+F1:Button("Disable Ragdoll",function()
+    fireclickdetector(game.Workspace.TestBase.DisableRagdoll.CD)
+end)
+
+F2:Button("Teleport to Sanatorium",function()
+    Player.Character.HumanoidRootPart.CFrame = CFrame.new(-4225.70947, 406.243774, 999.391235)
+end)
+
+F3:Button("Remove Blur", function()
+    game:GetService("Lighting").PanicBlur:Destroy() --Idk what to remove
+    game:GetService("Lighting").Stage5:Destroy()
+    game:GetService("Lighting").Stage4:Destroy()
+    game:GetService("Lighting").Running:Destroy()
+end)
+
+F3:Button("No Arrest", function()
+    game.workspace[game.Players.LocalPlayer.Name].Ragdoll:Destroy()
+end)
+
+while true do
+    wait()
+    if hungerEnabled == true then
+        game:GetService("Players").LocalPlayer.Voracity.Value = 100
+    end
+    if energyEnabled == true then
+        game:GetService("Players").LocalPlayer.Vigour.Value = 100
+    end
+end
