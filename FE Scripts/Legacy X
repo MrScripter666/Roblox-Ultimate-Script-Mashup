@@ -1,0 +1,1223 @@
+local LegacyX = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local MainFrame = Instance.new("ImageLabel")
+local Line1 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local X = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local FlyX = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Bag = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Target = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local FreeFists = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local AntiStomp = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local AntiFlashbang = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local AntiBag = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Headless = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Goto = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Spectate = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Unspectate = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Cash = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local FistReach = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local FEBackflip = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local Maskspam = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local Naked = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local GodBullet = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local GodmodeUnban = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local FreeFistsBiggerHitbox = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local FixRightFists = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local FixLeftFists = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local Info = Instance.new("TextLabel")
+local FlyGun = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local FlyMeleeWeapon = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local Frame = Instance.new("ImageLabel")
+local TextBox = Instance.new("TextBox")
+local Fatel = Instance.new("TextLabel")
+local function ShrinkName()
+	TextBox.FocusLost:connect(function()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if (string.sub(string.lower(v.Name),1,string.len(TextBox.Text))) == string.lower(TextBox.Text) then
+				TextBox.Text = v.Name
+			end
+		end
+	end)
+end
+
+ShrinkName()
+function findPlayer(name)
+	name = name:lower()
+	if name == 'me' then
+		return game:GetService'Players'.LocalPlayer
+	end
+	for i,v in pairs(game:GetService'Players':GetPlayers()) do
+		if v.Name:lower():find(name) == 1 then
+			return v
+		end
+	end
+end
+
+--Properties:
+
+LegacyX.Name = "buy racmdx"
+LegacyX.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = LegacyX
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.7141518, 0, 0.537688375, 0)
+Main.Size = UDim2.new(0, 292, 0, 250)
+Main.Image = "rbxassetid://3570695787"
+Main.ImageColor3 = Color3.fromRGB(7, 7, 7)
+Main.ImageTransparency = 1.000
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(100, 100, 100, 100)
+Main.SliceScale = 0.120
+Main.Draggable = true
+
+MainFrame.Name = "Main Frame"
+MainFrame.Parent = Main
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.Position = UDim2.new(0.0273972563, 0, 0.0399999954, 0)
+MainFrame.Size = UDim2.new(0, 277, 0, 230)
+MainFrame.Image = "rbxassetid://3570695787"
+MainFrame.ImageColor3 = Color3.fromRGB(11, 11, 11)
+MainFrame.ScaleType = Enum.ScaleType.Slice
+MainFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+MainFrame.SliceScale = 0.080
+
+Line1.Name = "Line 1"
+Line1.Parent = MainFrame
+Line1.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Line1.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Line1.BorderSizePixel = 0
+Line1.Position = UDim2.new(0.0516151525, 0, 0.129272863, 0)
+Line1.Size = UDim2.new(0, 248, 0, 5)
+
+UICorner.CornerRadius = UDim.new(0.200000003, 0)
+UICorner.Parent = Line1
+
+X.Name = "X"
+X.Parent = MainFrame
+X.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+X.BackgroundTransparency = 1.000
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.212996393, 0, 0, 0)
+X.Size = UDim2.new(0, 28, 0, 29)
+X.Font = Enum.Font.Cartoon
+X.Text = "racmdx"
+X.TextColor3 = Color3.fromRGB(255, 0, 68)
+X.TextSize = 9.000
+X.TextWrapped = true
+
+ScrollingFrame.Parent = MainFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 0, 0.178260863, 0)
+ScrollingFrame.Size = UDim2.new(0, 277, 0, 153)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 847)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
+
+FlyX.Name = "Fly [X]"
+FlyX.Parent = ScrollingFrame
+FlyX.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FlyX.BorderSizePixel = 0
+FlyX.Position = UDim2.new(0.109376982, 0, 0.0149849486, 0)
+FlyX.Size = UDim2.new(0, 216, 0, 29)
+FlyX.Font = Enum.Font.Cartoon
+FlyX.Text = "Fly [X]"
+FlyX.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlyX.TextScaled = true
+FlyX.TextSize = 14.000
+FlyX.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0.25, 0)
+UICorner_2.Parent = FlyX
+FlyX.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] Fly Enabled to true." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+
+	localplayer = plr
+
+	if workspace:FindFirstChild("Core") then
+		workspace.Core:Destroy()
+	end
+
+	local Core = Instance.new("Part")
+	Core.Name = "Core"
+	Core.Size = Vector3.new(0.05, 0.05, 0.05)
+
+	spawn(function()
+		Core.Parent = workspace
+		local Weld = Instance.new("Weld", Core)
+		Weld.Part0 = Core
+		Weld.Part1 = localplayer.Character.LowerTorso
+		Weld.C0 = CFrame.new(0, 0, 0)
+	end)
+
+	workspace:WaitForChild("Core")
+
+	local torso = workspace.Core
+	flying = true
+	local speed=50
+	local keys={a=false,d=false,w=false,s=false}
+	local e1
+	local e2
+	local function start()
+		local pos = Instance.new("BodyPosition",torso)
+		local gyro = Instance.new("BodyGyro",torso)
+		pos.Name="EPIXPOS"
+		pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+		pos.position = torso.Position
+		gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		gyro.cframe = torso.CFrame
+		repeat
+			wait()
+			localplayer.Character.Humanoid.PlatformStand=true
+			local new=gyro.cframe - gyro.cframe.p + pos.position
+			if not keys.w and not keys.s and not keys.a and not keys.d then
+				speed=50
+			end
+			if keys.w then
+				new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.s then
+				new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.d then
+				new = new * CFrame.new(speed,0,0)
+				speed=speed+0
+			end
+			if keys.a then
+				new = new * CFrame.new(-speed,0,0)
+				speed=speed+0
+			end
+			if speed>10 then
+				speed=50
+			end
+			pos.position=new.p
+			if keys.w then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+			elseif keys.s then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+			else
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+			end
+		until flying == false
+		if gyro then gyro:Destroy() end
+		if pos then pos:Destroy() end
+		flying=false
+		localplayer.Character.Humanoid.PlatformStand=false
+		speed=50
+	end
+	e1=mouse.KeyDown:connect(function(key)
+		if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+		if key=="w" then
+			keys.w=true
+		elseif key=="s" then
+			keys.s=true
+		elseif key=="a" then
+			keys.a=true
+		elseif key=="d" then
+			keys.d=true
+		elseif key=="x" then
+			if flying==true then
+				flying=false
+			else
+				flying=true
+				start()
+			end
+		end
+	end)
+	e2=mouse.KeyUp:connect(function(key)
+		if key=="w" then
+			keys.w=false
+		elseif key=="s" then
+			keys.s=false
+		elseif key=="a" then
+			keys.a=false
+		elseif key=="d" then
+			keys.d=false
+		end
+	end)
+	start() 																		
+end)
+
+Bag.Name = "Bag"
+Bag.Parent = ScrollingFrame
+Bag.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Bag.BorderSizePixel = 0
+Bag.Position = UDim2.new(0.109376982, 0, 0.238463193, 0)
+Bag.Size = UDim2.new(0, 216, 0, 29)
+Bag.Font = Enum.Font.Cartoon
+Bag.Text = "Bag"
+Bag.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bag.TextScaled = true
+Bag.TextSize = 14.000
+Bag.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0.25, 0)
+UICorner_3.Parent = Bag
+Bag.MouseButton1Click:connect(function()
+	local TargetPlr = TextBox.Text
+	function getRoot(char)
+		local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+		return rootPart
+	end
+
+	if TargetPlr and game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop['[BrownBag] - $25'].Head.CFrame
+		wait(.30)
+		fireclickdetector(game.Workspace.Ignored.Shop['[BrownBag] - $25'].ClickDetector)
+		game.Players.LocalPlayer.Backpack:WaitForChild("[BrownBag]").Parent = game.Players.LocalPlayer.Character
+
+		local A_1 = "[buy racmdx] Attempting To Bag " .. TargetPlr .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		wait(.5)
+		repeat
+			pcall(function()
+				wait()
+				getRoot(game.Players[TargetPlr].Character).CFrame = getRoot(game.Players.LocalPlayer.Character).CFrame + Vector3.new(1,3,0)
+				game.Players.LocalPlayer.Character["[BrownBag]"]:Activate()
+			end)
+		until game.Players[TargetPlr].Character:FindFirstChild("Christmas_Sock")
+		local A_1 = "[buy racmdx] Successfully Bagged " .. TargetPlr .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	elseif game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
+		local A_1 = "[buy racmdx] " .. TargetPlr .. " Is Already Bagged." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	end
+end)
+
+Target.Name = "Target"
+Target.Parent = ScrollingFrame
+Target.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Target.BorderSizePixel = 0
+Target.Position = UDim2.new(0.109376982, 0, 0.275419772, 0)
+Target.Size = UDim2.new(0, 216, 0, 29)
+Target.Font = Enum.Font.Cartoon
+Target.Text = "Target"
+Target.TextColor3 = Color3.fromRGB(255, 255, 255)
+Target.TextScaled = true
+Target.TextSize = 14.000
+Target.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0.25, 0)
+UICorner_4.Parent = Target
+Target.MouseButton1Click:connect(function()
+	local localPlayer     = game:GetService("Players").LocalPlayer;
+	local localCharacter  = localPlayer.Character;
+	local TargetPlr       = TextBox.Text;
+	wait(0) local A_1 = "[buy racmdx] " .. TargetPlr .. "Has Been Locked." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+
+
+	if TargetPlr and game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
+		pcall(function()
+
+			game.Players.LocalPlayer.Character.LeftHand.Size = Vector3.new(4,4,4)
+			localCharacter.LeftHand.LeftWrist:Destroy();
+			localCharacter.RightHand.RightWrist:Destroy();
+			game.Players.LocalPlayer.Character.RightHand.Size = Vector3.new(4,4,4)
+
+		end);
+		repeat
+			wait();
+			localCharacter.LeftHand.CFrame = game.Players[TargetPlr].Character.LowerTorso.CFrame;
+			localCharacter.RightHand.CFrame = game.Players[TargetPlr].Character.LowerTorso.CFrame;
+		until game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == true
+		wait(0) local A_1 = "[buy racmdx] " .. TargetPlr .. " Has Been Successfully Eliminated!" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "buy racmdx [Target System]";
+			Text = "[buy racmdx] " .. TargetPlr .. " Has been successfully knocked!";
+			Duration = 15;
+		})
+	elseif game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == true then
+		wait(0) local A_1 = "[buy racmdx] " .. TargetPlr .. " Is Already Eliminated." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "buy racmdx [TARGET SYSTEM]";
+			Text = "[buy racmdx] " .. TargetPlr .. " Is already knocked.";
+			Duration = 15;
+		})
+	end;
+end);
+
+FreeFists.Name = "Free Fists"
+FreeFists.Parent = ScrollingFrame
+FreeFists.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FreeFists.BorderSizePixel = 0
+FreeFists.Position = UDim2.new(0.109376982, 0, 0.198898003, 0)
+FreeFists.Size = UDim2.new(0, 216, 0, 29)
+FreeFists.Font = Enum.Font.Cartoon
+FreeFists.Text = "Free Fists"
+FreeFists.TextColor3 = Color3.fromRGB(255, 255, 255)
+FreeFists.TextScaled = true
+FreeFists.TextSize = 14.000
+FreeFists.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0.25, 0)
+UICorner_5.Parent = FreeFists
+FreeFists.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] FreeFists Switched To True." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+
+	local LocalPlayer = Players.LocalPlayer
+	local Mouse = LocalPlayer:GetMouse()
+
+	local Character = LocalPlayer.Character
+	local RightHand = Character.RightHand
+	local Character = LocalPlayer.Character
+	local LeftHand = Character.LeftHand
+
+	wait(3)
+
+	local Box = Instance.new("SelectionBox")
+	Box.LineThickness = 0.15
+	Box.Color3 = Color3.new(0, 1, 0.0313725)
+	Box.Adornee = RightHand
+	Box.Parent = RightHand
+
+	LeftHand.LeftWrist:Destroy() 
+
+	local Box = Instance.new("SelectionBox")
+	Box.LineThickness = 0.15
+	Box.Color3 = Color3.new(0.215686, 1, 0)
+	Box.Adornee = LeftHand
+	Box.Parent = LeftHand
+
+	RightHand.RightWrist:Destroy() 
+
+	while true do 
+		pcall(function()
+			RightHand.Position = Mouse.Hit.p
+			RightHand.Rotation = Vector3.new(0,0,0)
+			RightHand.Massless = true
+			LeftHand.Position = Mouse.Hit.p
+			LeftHand.Rotation = Vector3.new(0,0,0)
+			LeftHand.Massless = true
+		end)
+		pcall(function()
+			local Tool = Character:FindFirstChildOfClass("Tool")
+			Tool.Handle.Position = RightHand.Position
+			Tool.Handle.Position = LeftHand.Position
+		end)
+		RunService.RenderStepped:Wait()
+	end
+end)
+
+AntiStomp.Name = "Anti Stomp"
+AntiStomp.Parent = ScrollingFrame
+AntiStomp.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+AntiStomp.BorderSizePixel = 0
+AntiStomp.Position = UDim2.new(0.109376982, 0, 0.162810996, 0)
+AntiStomp.Size = UDim2.new(0, 216, 0, 29)
+AntiStomp.Font = Enum.Font.Cartoon
+AntiStomp.Text = "Anti Stomp"
+AntiStomp.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiStomp.TextScaled = true
+AntiStomp.TextSize = 14.000
+AntiStomp.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0.25, 0)
+UICorner_6.Parent = AntiStomp
+AntiStomp.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] Anti-Stomp Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "buy racmdx";
+		Text = "Anti stomp enabled."
+	})
+	pcall(function() if tostring(game.PlaceId) == "2788229376" then local corepackages = game:GetService"CorePackages" local localplayer = game:GetService"Players".LocalPlayer local run = game:GetService"RunService" run:BindToRenderStep("rrrrrrrrrrr",2000,function() pcall(function() if localplayer.Character.Humanoid.Health <= 30 then localplayer.Character.Humanoid:UnequipTools() localplayer.Character.Humanoid:Destroy() workspace.CurrentCamera.CameraSubject = localplayer.Character wait() local prt = Instance.new("Model", corepackages); Instance.new("Part", prt).Name="Torso"; Instance.new("Part", prt).Name="Head"; Instance.new("Humanoid", prt).Name="Humanoid"; localplayer.Character=prt end end) pcall(function() if localplayer.Character.Humanoid.FloorMaterial == "Plastic" then ReplicatedStorage:FireServer("Stomp") end end) end) 
+end end)
+end)
+
+AntiFlashbang.Name = "AntiFlashbang"
+AntiFlashbang.Parent = ScrollingFrame
+AntiFlashbang.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+AntiFlashbang.BorderSizePixel = 0
+AntiFlashbang.Position = UDim2.new(0.109376982, 0, 0.124984942, 0)
+AntiFlashbang.Size = UDim2.new(0, 216, 0, 29)
+AntiFlashbang.Font = Enum.Font.Cartoon
+AntiFlashbang.Text = "Anti Flash-Bang"
+AntiFlashbang.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiFlashbang.TextScaled = true
+AntiFlashbang.TextSize = 14.000
+AntiFlashbang.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0.25, 0)
+UICorner_7.Parent = AntiFlashbang
+AntiFlashbang.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] Anti-Flashbang Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+
+	while true do
+		local XD = game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui
+
+		if XD:FindFirstChild("whiteScreen") then
+			XD.whiteScreen:Destroy()
+		end
+		wait(0.2)
+	end										
+end)
+
+AntiBag.Name = "Anti Bag"
+AntiBag.Parent = ScrollingFrame
+AntiBag.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+AntiBag.BorderSizePixel = 0
+AntiBag.Position = UDim2.new(0.109376982, 0, 0.0880284235, 0)
+AntiBag.Size = UDim2.new(0, 216, 0, 29)
+AntiBag.Font = Enum.Font.Cartoon
+AntiBag.Text = "Anti Bag"
+AntiBag.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiBag.TextScaled = true
+AntiBag.TextSize = 14.000
+AntiBag.TextWrapped = true
+
+UICorner_8.CornerRadius = UDim.new(0.25, 0)
+UICorner_8.Parent = AntiBag
+AntiBag.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] Anti-Bag Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+	local char = LocalPlayer.Character
+	char.ChildAdded:Connect(function(sock)
+		if sock:IsA("MeshPart") then do
+				wait(0)
+				sock:Destroy()
+			end
+		end
+	end)
+end)
+
+Headless.Name = "Headless"
+Headless.Parent = ScrollingFrame
+Headless.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Headless.BorderSizePixel = 0
+Headless.Position = UDim2.new(0.109376982, 0, 0.0510719046, 0)
+Headless.Size = UDim2.new(0, 216, 0, 29)
+Headless.Font = Enum.Font.Cartoon
+Headless.Text = "Headless"
+Headless.TextColor3 = Color3.fromRGB(255, 255, 255)
+Headless.TextScaled = true
+Headless.TextSize = 14.000
+Headless.TextWrapped = true
+
+UICorner_9.CornerRadius = UDim.new(0.25, 0)
+UICorner_9.Parent = Headless
+Headless.MouseButton1Down:connect(function()
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "buy racmdx";
+		Text = "Headles Enabled. no one can see ur face or ur head."
+	})
+
+	pcall(function()
+		game.Players.LocalPlayer.Character.Head.Neck:Destroy()
+		game.Players.LocalPlayer.Character.UpperTorso.NeckAttachment:Destroy()
+		game.Players.LocalPlayer.Character.Humanoid.HealthDisplayDistance = math.huge
+		game.Players.LocalPlayer.Character.Humanoid.NameDisplayDistance = math.huge
+		game.Players.LocalPlayer.Character.Head.Size = Vector3.new(0,0,0)
+		game.Players.LocalPlayer.Character.Head.Massless = true
+		game.Players.LocalPlayer.Character.Head.CanCollide = false
+
+		heazd = true
+
+		while heazd == true do 
+			pcall(function()  
+				game.Players.LocalPlayer.Character.Head.NeckRigAttachment.CFrame =  CFrame.new(0, 100000.4736328125, 0)
+				game.Players.LocalPlayer.Character.UpperTorso.NeckRigAttachment.CFrame =  CFrame.new(0, 100000.4736328125, 0)
+				game.Players.LocalPlayer.Character.Head.CFrame = CFrame.new(0, 100000.4736328125, 0)
+			end)
+			wait()
+		end
+	end)
+end)
+
+Goto.Name = "Goto"
+Goto.Parent = ScrollingFrame
+Goto.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Goto.BorderSizePixel = 0
+Goto.Position = UDim2.new(0.109376982, 0, 0.311941445, 0)
+Goto.Size = UDim2.new(0, 216, 0, 29)
+Goto.Font = Enum.Font.Cartoon
+Goto.Text = "Goto"
+Goto.TextColor3 = Color3.fromRGB(255, 255, 255)
+Goto.TextScaled = true
+Goto.TextSize = 14.000
+Goto.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0.25, 0)
+UICorner_10.Parent = Goto
+Goto.MouseButton1Click:connect(function()
+	local TargetPlr = TextBox.Text;
+	local A_1 = "[buy racmdx] Teleporting To " .. TargetPlr .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	wait(.30)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[TargetPlr].Character.HumanoidRootPart.CFrame
+end)
+
+Spectate.Name = "Spectate"
+Spectate.Parent = ScrollingFrame
+Spectate.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Spectate.BorderSizePixel = 0
+Spectate.Position = UDim2.new(0.109376982, 0, 0.348897994, 0)
+Spectate.Size = UDim2.new(0, 216, 0, 29)
+Spectate.Font = Enum.Font.Cartoon
+Spectate.Text = "Spectate"
+Spectate.TextColor3 = Color3.fromRGB(255, 255, 255)
+Spectate.TextScaled = true
+Spectate.TextSize = 14.000
+Spectate.TextWrapped = true
+
+UICorner_11.CornerRadius = UDim.new(0.25, 0)
+UICorner_11.Parent = Spectate
+Spectate.MouseButton1Click:connect(function()
+	local TargetPlr = TextBox.Text;
+	game.Workspace.Camera.CameraSubject = game.Players[TargetPlr].Character.Humanoid;
+	local A_1 = "[buy racmdx] Spectating " .. TargetPlr .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+end)
+
+Unspectate.Name = "Unspectate"
+Unspectate.Parent = ScrollingFrame
+Unspectate.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Unspectate.BorderSizePixel = 0
+Unspectate.Position = UDim2.new(0.109376982, 0, 0.385854483, 0)
+Unspectate.Size = UDim2.new(0, 216, 0, 29)
+Unspectate.Font = Enum.Font.Cartoon
+Unspectate.Text = "Unspectate"
+Unspectate.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unspectate.TextScaled = true
+Unspectate.TextSize = 14.000
+Unspectate.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(0.25, 0)
+UICorner_12.Parent = Unspectate
+Unspectate.MouseButton1Click:connect(function()
+	local TargetPlr = TextBox.Text;
+	local A_1 = "[buy racmdx] Stopped Spectating " .. TargetPlr .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+end)
+
+Cash.Name = "Cash"
+Cash.Parent = ScrollingFrame
+Cash.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Cash.BorderSizePixel = 0
+Cash.Position = UDim2.new(0.109376982, 0, 0.423680574, 0)
+Cash.Size = UDim2.new(0, 216, 0, 29)
+Cash.Font = Enum.Font.Cartoon
+Cash.Text = "Cash"
+Cash.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cash.TextScaled = true
+Cash.TextSize = 14.000
+Cash.TextWrapped = true
+
+UICorner_13.CornerRadius = UDim.new(0.25, 0)
+UICorner_13.Parent = Cash
+Cash.MouseButton1Click:connect(function()
+	local TargetPlr = TextBox.Text;
+	local A_1 = "[buy racmdx] " .. TargetPlr .. " Has $" .. game.Players[TargetPlr].DataFolder.Currency.Value .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+end)
+
+FistReach.Name = "Fist Reach"
+FistReach.Parent = ScrollingFrame
+FistReach.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FistReach.BorderSizePixel = 0
+FistReach.Position = UDim2.new(0.109376982, 0, 0.462810993, 0)
+FistReach.Size = UDim2.new(0, 216, 0, 29)
+FistReach.Font = Enum.Font.Cartoon
+FistReach.Text = "Fist Reach"
+FistReach.TextColor3 = Color3.fromRGB(255, 255, 255)
+FistReach.TextScaled = true
+FistReach.TextSize = 14.000
+FistReach.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0.25, 0)
+UICorner_14.Parent = FistReach
+FistReach.MouseButton1Down:connect(function()
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "buy racmdx";
+		Text = "Melee Reach Enabled."
+	})
+	LP = game.Players.LocalPlayer 
+
+	for i,v in ipairs(LP.Character:GetDescendants()) do 
+
+		if v:IsA("MeshPart") then v.Massless = true 
+
+			v.CanCollide = false 
+
+			v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0) 
+
+
+		end 
+
+	end 
+
+
+	for i,v in ipairs(game.workspace:GetDescendants()) do 
+
+		if v:IsA("Seat") then 
+
+			v.Disabled = true 
+
+		end 
+
+	end 
+
+	x = 45
+
+	y = 45 
+
+	z = 45
+
+
+
+	penis = Vector3.new(x,y,z) 
+
+
+	LP.Character.RightHand.Size = penis 
+
+
+	local selectionBox = Instance.new("SelectionBox",LP.Character.RightHand) 
+
+	selectionBox.Adornee = LP.Character.RightHand 
+	selectionBox = Enum.Material.Neon
+	selectionBox.Color3 = Color3.new(1, 1, 1)  
+
+	LP.Character.LeftHand.Size = penis 
+
+	LP.Character.BodyEffects.SpecialParts.LeftHand.Size = penis 
+
+
+
+	local selectionBox = Instance.new("SelectionBox",LP.Character.LeftHand) 
+
+	selectionBox.Adornee = LP.Character.LeftHand 
+	selectionBox = Enum.Material.Neon
+	selectionBox.Color3 = Color3.new(1, 1, 1) 
+
+end)
+
+FEBackflip.Name = "FE Backflip"
+FEBackflip.Parent = ScrollingFrame
+FEBackflip.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FEBackflip.BorderSizePixel = 0
+FEBackflip.Position = UDim2.new(0.109376982, 0, 0.499332726, 0)
+FEBackflip.Size = UDim2.new(0, 216, 0, 29)
+FEBackflip.Font = Enum.Font.Cartoon
+FEBackflip.Text = "Fe Backflip"
+FEBackflip.TextColor3 = Color3.fromRGB(255, 255, 255)
+FEBackflip.TextScaled = true
+FEBackflip.TextSize = 14.000
+FEBackflip.TextWrapped = true
+
+UICorner_15.CornerRadius = UDim.new(0.25, 0)
+UICorner_15.Parent = FEBackflip
+FEBackflip.MouseButton1Down:connect(function()
+	wait(5)
+
+	--[[ Info ]]--
+
+	local ver = "2.00"
+	local scriptname = "feFlip"
+
+
+	--[[ Keybinds ]]--
+
+	local FrontflipKey = Enum.KeyCode.Z
+	local BackflipKey = Enum.KeyCode.X
+	local AirjumpKey = Enum.KeyCode.C
+
+
+	--[[ Dependencies ]]--
+
+	local ca = game:GetService("ContextActionService")
+	local zeezy = game:GetService("Players").LocalPlayer
+	local h = 0.0174533
+	local antigrav
+
+
+	--[[ Functions ]]--
+
+	function zeezyFrontflip(act,inp,obj)
+		if inp == Enum.UserInputState.Begin then
+			zeezy.Character.Humanoid:ChangeState("Jumping")
+			wait()
+			zeezy.Character.Humanoid.Sit = true
+			for i = 1,360 do 
+				delay(i/720,function()
+					zeezy.Character.Humanoid.Sit = true
+					zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(-h,0,0)
+				end)
+			end
+			wait(0.55)
+			zeezy.Character.Humanoid.Sit = false
+		end
+	end
+
+	function zeezyBackflip(act,inp,obj)
+		if inp == Enum.UserInputState.Begin then
+			zeezy.Character.Humanoid:ChangeState("Jumping")
+			wait()
+			zeezy.Character.Humanoid.Sit = true
+			for i = 1,360 do
+				delay(i/720,function()
+					zeezy.Character.Humanoid.Sit = true
+					zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(h,0,0)
+				end)
+			end
+			wait(0.55)
+			zeezy.Character.Humanoid.Sit = false
+		end
+	end
+
+	function zeezyAirjump(act,inp,obj)
+		if inp == Enum.UserInputState.Begin then
+			zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Seated")
+			wait()
+			zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")	
+		end
+	end
+
+
+	--[[ Binds ]]--
+
+	ca:BindAction("zeezyFrontflip",zeezyFrontflip,false,FrontflipKey)
+	ca:BindAction("zeezyBackflip",zeezyBackflip,false,BackflipKey)
+	ca:BindAction("zeezyAirjump",zeezyAirjump,false,AirjumpKey)
+
+	--[[ Load Message ]]--
+
+	local notifSound = Instance.new("Sound",workspace)
+	notifSound.PlaybackSpeed = 1.5
+	notifSound.Volume = 0.15
+	notifSound.SoundId = "rbxassetid://170765130"
+	notifSound.PlayOnRemove = true
+	notifSound:Destroy()
+	game.StarterGui:SetCore("SendNotification", {Title = "buy racmdx", Text = "febackslip loaded successfully!", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
+end)
+
+Maskspam.Name = "Maskspam"
+Maskspam.Parent = ScrollingFrame
+Maskspam.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Maskspam.BorderSizePixel = 0
+Maskspam.Position = UDim2.new(0.109376982, 0, 0.534984887, 0)
+Maskspam.Size = UDim2.new(0, 216, 0, 29)
+Maskspam.Font = Enum.Font.Cartoon
+Maskspam.Text = "Mask Spam | Lag Reset"
+Maskspam.TextColor3 = Color3.fromRGB(255, 255, 255)
+Maskspam.TextScaled = true
+Maskspam.TextSize = 14.000
+Maskspam.TextWrapped = true
+
+UICorner_16.CornerRadius = UDim.new(0.25, 0)
+UICorner_16.Parent = Maskspam
+Maskspam.MouseButton1Down:connect(function()
+	local notifSound = Instance.new("Sound",workspace)
+	notifSound.PlaybackSpeed = 1.5
+	notifSound.Volume = 0.15
+	notifSound.SoundId = "rbxassetid://170765130"
+	notifSound.PlayOnRemove = true
+	notifSound:Destroy()
+	game.StarterGui:SetCore("SendNotification", {Title = "buy racmdx", Text = "Mask Spam | Health Spam [Enabled]", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
+	gsPlayers = game:GetService("Players")
+	gsWorkspace = game:GetService("Workspace")
+	gsLighting = game:GetService("Lighting")
+	gsReplicatedStorage = game:GetService("ReplicatedStorage")
+	gsCoreGui = game:GetService("CoreGui")
+	gsTween = game:GetService("TweenService")
+	gsHttp = game:GetService("HttpService")
+
+	LP = gsPlayers.LocalPlayer
+	Mouse = LP:GetMouse()
+
+	LP.Character.ChildAdded:Connect(function(b)
+		wait(0)
+		if b:IsA("Accessory") then b.Handle.Mesh:Destroy()
+			b.Parent = gsWorkspace
+		end
+	end)
+end)
+
+
+Naked.Name = "Naked"
+Naked.Parent = ScrollingFrame
+Naked.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+Naked.BorderSizePixel = 0
+Naked.Position = UDim2.new(0.109376982, 0, 0.570637047, 0)
+Naked.Size = UDim2.new(0, 216, 0, 29)
+Naked.Font = Enum.Font.Cartoon
+Naked.Text = "Naked"
+Naked.TextColor3 = Color3.fromRGB(255, 255, 255)
+Naked.TextScaled = true
+Naked.TextSize = 14.000
+Naked.TextWrapped = true
+
+UICorner_17.CornerRadius = UDim.new(0.25, 0)
+UICorner_17.Parent = Naked
+Naked.MouseButton1Down:connect(function()
+	local notifSound = Instance.new("Sound",workspace)
+	notifSound.PlaybackSpeed = 1.5
+	notifSound.Volume = 0.15
+	notifSound.SoundId = "rbxassetid://170765130"
+	notifSound.PlayOnRemove = true
+	notifSound:Destroy()
+	game.StarterGui:SetCore("SendNotification", {Title = "buy racmdx", Text = "Removing ur clothes ;))", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
+	while wait() do
+		pcall(function()
+			if game.Players.LocalPlayer.Character:FindFirstChild("Shirt") then
+				game.Players.LocalPlayer.Character.Shirt:Destroy()
+			elseif game.Players.LocalPlayer.Character:FindFirstChild("Pants") then
+				game.Players.LocalPlayer.Character.Pants:Destroy()
+			end
+		end)
+	end
+end)
+
+GodBullet.Name = "GodBullet"
+GodBullet.Parent = ScrollingFrame
+GodBullet.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+GodBullet.BorderSizePixel = 0
+GodBullet.Position = UDim2.new(0.109376982, 0, 0.605419636, 0)
+GodBullet.Size = UDim2.new(0, 216, 0, 29)
+GodBullet.Font = Enum.Font.Cartoon
+GodBullet.Text = "God Bullet"
+GodBullet.TextColor3 = Color3.fromRGB(255, 255, 255)
+GodBullet.TextScaled = true
+GodBullet.TextSize = 14.000
+GodBullet.TextWrapped = true
+
+UICorner_18.CornerRadius = UDim.new(0.25, 0)
+UICorner_18.Parent = GodBullet
+GodBullet.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] Bulletproof Switched To True." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "buy racmdx";
+		Text = "God Bullet enabled. bullets wont damage u anymore!"
+	})
+	local ps = game:GetService("Players")
+	local lp = ps.LocalPlayer
+	local char = lp.Character
+
+	char.BodyEffects.Armor:Destroy()
+	char.BodyEffects.Defense:Destroy()
+
+	local Clone1 = Instance.new("IntValue")
+	Clone1.Name = "Armor"
+	Clone1.Parent = char.BodyEffects
+
+	local Clone2 = Instance.new("NumberValue")
+	Clone2.Name = "Defense"
+	Clone2.Parent = char.BodyEffects
+end)
+
+GodmodeUnban.Name = "Godmode + Unban"
+GodmodeUnban.Parent = ScrollingFrame
+GodmodeUnban.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+GodmodeUnban.BorderSizePixel = 0
+GodmodeUnban.Position = UDim2.new(0.10576687, 0, 0.640202224, 0)
+GodmodeUnban.Size = UDim2.new(0, 216, 0, 29)
+GodmodeUnban.Font = Enum.Font.Cartoon
+GodmodeUnban.Text = "God Mode + Unban"
+GodmodeUnban.TextColor3 = Color3.fromRGB(255, 255, 255)
+GodmodeUnban.TextScaled = true
+GodmodeUnban.TextSize = 14.000
+GodmodeUnban.TextWrapped = true
+
+UICorner_19.CornerRadius = UDim.new(0.25, 0)
+UICorner_19.Parent = GodmodeUnban
+GodmodeUnban.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] Godmode and Unban Enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	local notifSound = Instance.new("Sound",workspace)
+	notifSound.PlaybackSpeed = 1.5
+	notifSound.Volume = 0.15
+	notifSound.SoundId = "rbxassetid://170765130"
+	notifSound.PlayOnRemove = true
+	notifSound:Destroy()
+	game.StarterGui:SetCore("SendNotification", {Title = "buy racmdx", Text = "God Mode Enabled | Unban Enabled [Guns Only With God Mode]", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
+	local name = game.Players.LocalPlayer.Name
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	game.Players.LocalPlayer.Character:ClearAllChildren()
+	local lol =    game.Workspace:WaitForChild(name)
+	local money = Instance.new("Folder",game.Players.LocalPlayer.Character);money.Name = "FULLY_LOADED_CHAR"
+	lol.Parent = game.Workspace.Players
+	game.Players.LocalPlayer.Character:WaitForChild("BodyEffects")
+	game.Players.LocalPlayer.Character.BodyEffects.BreakingParts:Destroy()
+end)
+
+FreeFistsBiggerHitbox.Name = "Free Fists Bigger Hitbox"
+FreeFistsBiggerHitbox.Parent = ScrollingFrame
+FreeFistsBiggerHitbox.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FreeFistsBiggerHitbox.BorderSizePixel = 0
+FreeFistsBiggerHitbox.Position = UDim2.new(0.109376982, 0, 0.676723957, 0)
+FreeFistsBiggerHitbox.Size = UDim2.new(0, 216, 0, 29)
+FreeFistsBiggerHitbox.Font = Enum.Font.Cartoon
+FreeFistsBiggerHitbox.Text = "FreeFists [HitBox]"
+FreeFistsBiggerHitbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+FreeFistsBiggerHitbox.TextScaled = true
+FreeFistsBiggerHitbox.TextSize = 14.000
+FreeFistsBiggerHitbox.TextWrapped = true
+
+UICorner_20.CornerRadius = UDim.new(0.25, 0)
+UICorner_20.Parent = FreeFistsBiggerHitbox
+FreeFistsBiggerHitbox.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] FreeFists Switched To True." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+
+	local LocalPlayer = Players.LocalPlayer
+	local Mouse = LocalPlayer:GetMouse()
+
+	local Character = LocalPlayer.Character
+	local RightHand = Character.RightHand
+	local Character = LocalPlayer.Character
+	local LeftHand = Character.LeftHand
+
+	wait(3)
+
+	local Box = Instance.new("SelectionBox")
+	Box.LineThickness = 0.15
+	Box.Color3 = Color3.new(0, 1, 0.0313725)
+	Box.Adornee = RightHand
+	Box.Parent = RightHand
+
+	LeftHand.LeftWrist:Destroy()
+	game.Players.LocalPlayer.Character.LeftHand.Size = Vector3.new(4,4,4)
+
+	local Box = Instance.new("SelectionBox")
+	Box.LineThickness = 0.15
+	Box.Color3 = Color3.new(0.215686, 1, 0)
+	Box.Adornee = LeftHand
+	Box.Parent = LeftHand
+
+	RightHand.RightWrist:Destroy() 
+	game.Players.LocalPlayer.Character.RightHand.Size = Vector3.new(4,4,4)
+
+	while true do 
+		pcall(function()
+			RightHand.Position = Mouse.Hit.p
+			RightHand.Rotation = Vector3.new(0,0,0)
+			RightHand.Massless = true
+			LeftHand.Position = Mouse.Hit.p
+			LeftHand.Rotation = Vector3.new(0,0,0)
+			LeftHand.Massless = true
+		end)
+		pcall(function()
+			local Tool = Character:FindFirstChildOfClass("Tool")
+			Tool.Handle.Position = RightHand.Position
+			Tool.Handle.Position = LeftHand.Position
+		end)
+		RunService.RenderStepped:Wait()
+	end
+end)
+
+
+FixRightFists.Name = "Fix Right Fists"
+FixRightFists.Parent = ScrollingFrame
+FixRightFists.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FixRightFists.BorderSizePixel = 0
+FixRightFists.Position = UDim2.new(0.109376982, 0, 0.712376118, 0)
+FixRightFists.Size = UDim2.new(0, 216, 0, 29)
+FixRightFists.Font = Enum.Font.Cartoon
+FixRightFists.Text = "Fix Right Fist"
+FixRightFists.TextColor3 = Color3.fromRGB(255, 255, 255)
+FixRightFists.TextScaled = true
+FixRightFists.TextSize = 14.000
+FixRightFists.TextWrapped = true
+
+UICorner_21.CornerRadius = UDim.new(0.25, 0)
+UICorner_21.Parent = FixRightFists
+FixRightFists.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.RightHand.Size = Vector3.new(1,1,1)
+end)
+
+FixLeftFists.Name = "Fix Left Fists"
+FixLeftFists.Parent = ScrollingFrame
+FixLeftFists.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FixLeftFists.BorderSizePixel = 0
+FixLeftFists.Position = UDim2.new(0.10576687, 0, 0.748028278, 0)
+FixLeftFists.Size = UDim2.new(0, 216, 0, 29)
+FixLeftFists.Font = Enum.Font.Cartoon
+FixLeftFists.Text = "Fix Left Fist"
+FixLeftFists.TextColor3 = Color3.fromRGB(255, 255, 255)
+FixLeftFists.TextScaled = true
+FixLeftFists.TextSize = 14.000
+FixLeftFists.TextWrapped = true
+
+UICorner_22.CornerRadius = UDim.new(0.25, 0)
+UICorner_22.Parent = FixLeftFists
+FixLeftFists.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.LeftHand.Size = Vector3.new(1,1,1)
+end)
+
+Info.Name = "Info"
+Info.Parent = ScrollingFrame
+Info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info.BackgroundTransparency = 1.000
+Info.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Info.Position = UDim2.new(0.0263444912, 0, 0.951430261, 0)
+Info.Size = UDim2.new(0, 262, 0, 50)
+Info.Font = Enum.Font.SourceSans
+Info.Text = "buy racmdx "
+Info.TextColor3 = Color3.fromRGB(140, 140, 140)
+Info.TextScaled = true
+Info.TextSize = 14.000
+Info.TextWrapped = true
+
+FlyGun.Name = "Fly Gun"
+FlyGun.Parent = ScrollingFrame
+FlyGun.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FlyGun.BorderSizePixel = 0
+FlyGun.Position = UDim2.new(0.10576687, 0, 0.787158728, 0)
+FlyGun.Size = UDim2.new(0, 216, 0, 29)
+FlyGun.Font = Enum.Font.Cartoon
+FlyGun.Text = "Airstrike [Guns Only]"
+FlyGun.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlyGun.TextScaled = true
+FlyGun.TextSize = 14.000
+FlyGun.TextWrapped = true
+
+UICorner_23.CornerRadius = UDim.new(0.25, 0)
+UICorner_23.Parent = FlyGun
+FlyGun.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[buy racmdx] Airstrike Switched To True." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,-10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end
+end)
+
+FlyMeleeWeapon.Name = "Fly Melee Weapon"
+FlyMeleeWeapon.Parent = ScrollingFrame
+FlyMeleeWeapon.BackgroundColor3 = Color3.fromRGB(255, 0, 68)
+FlyMeleeWeapon.BorderSizePixel = 0
+FlyMeleeWeapon.Position = UDim2.new(0.10576687, 0, 0.824550033, 0)
+FlyMeleeWeapon.Size = UDim2.new(0, 216, 0, 29)
+FlyMeleeWeapon.Font = Enum.Font.Cartoon
+FlyMeleeWeapon.Text = "Fly Melee Weapon"
+FlyMeleeWeapon.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlyMeleeWeapon.TextScaled = true
+FlyMeleeWeapon.TextSize = 14.000
+FlyMeleeWeapon.TextWrapped = true
+
+UICorner_24.CornerRadius = UDim.new(0.25, 0)
+UICorner_24.Parent = FlyMeleeWeapon
+FlyMeleeWeapon.MouseButton1Down:connect(function()
+wait(0) local A_1 = "[buy racmdx] Fly Melee Weapons Enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(15,15,15)                     lplayer.Character.Humanoid:UnequipTools()                 end end
+end)
+Frame.Name = "Frame"
+Frame.Parent = MainFrame
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.176895306, 0, 0.847826242, 0)
+Frame.Size = UDim2.new(0, 180, 0, 29)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.080
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderSizePixel = 0
+TextBox.Size = UDim2.new(0, 180, 0, 29)
+TextBox.Font = Enum.Font.PatrickHand
+TextBox.Text = "Command Here."
+TextBox.TextColor3 = Color3.fromRGB(255, 0, 98)
+TextBox.TextSize = 14.000
+
+Fatel.Name = "Fatel"
+Fatel.Parent = MainFrame
+Fatel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fatel.BackgroundTransparency = 1.000
+Fatel.BorderSizePixel = 0
+Fatel.Size = UDim2.new(0, 66, 0, 29)
+Fatel.Font = Enum.Font.Cartoon
+Fatel.Text = "Buy racmdx"
+Fatel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fatel.TextSize = 21.000
+Fatel.TextWrapped = true
+
+-- Scripts:
+
+local function VZEQVF_fake_script() -- LegacyX.IntroScript 
+	local script = Instance.new('LocalScript', LegacyX)
+
+	-- // Variables
+	local StarterFrame     = script.Parent.Main
+	local TweenService     = game:GetService("TweenService");
+	
+	-- // Properties
+	StarterFrame.Size = UDim2.new(0, 292, 0, 57)
+	StarterFrame["Main Frame"].Visible = false;
+	
+	-- // Functions
+	function TweenFrameSize(frame, endudim2, tweentime)
+	
+		local goal = {};
+		goal.Size = endudim2
+	
+		local info = TweenInfo.new(tweentime);
+	
+		local a = TweenService:Create(frame, info, goal);
+		a:Play();
+	end
+	
+	
+	-- // Fade In
+	wait(2);
+	
+	repeat
+		wait();
+		StarterFrame.ImageTransparency = StarterFrame.ImageTransparency - 0.07;
+	until StarterFrame.ImageTransparency <= 0;
+	
+	TweenFrameSize(StarterFrame, UDim2.new(0, 292, 0, 250), .20);
+	wait(.20)
+	
+	StarterFrame["Main Frame"].Visible = true
+	
+end
+coroutine.wrap(VZEQVF_fake_script)()
+
+-- // Keybind
+local Toggled = false
+game:GetService("UserInputService").InputBegan:connect(function(Key, g)
+	if g then return end;
+	if Key.KeyCode == Enum.KeyCode.V then
+		if Toggled == false then
+			Toggled = true
+			Main.Visible = false
+		elseif Toggled == true then
+			Toggled = false;
+			Main.Visible = true;
+		end;
+	end;
+end)
