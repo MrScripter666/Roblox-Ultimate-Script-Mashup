@@ -1,0 +1,18 @@
+local pl = game.Players.LocalPlayer.PlayerData
+--local tokens
+pl.Tokens.Value = 100000
+pl.Tickets.Value = 100000
+--freddy
+pl.FreddyPurchased.Value = true
+pl.FreddyPurchased.Skin1.Value = true
+pl.FreddyPurchased.Skin2.Value = true
+--bonnie
+pl.BonniePurchased.Value = true
+pl.BonniePurchased.Skin1.Value = true
+pl.BonniePurchased.Skin2.Value = true
+--chica
+pl.ChicaPurchased.Value = true
+pl.ChicaPurchased.Skin1.Value = true
+--golden fred
+pl.GFreddyPurchased.Value = true
+pl.GFreddyPurchased.Skin1.Value = true
