@@ -1,0 +1,6 @@
+-- H3x0Rs Ownership Script v2.1.1
+local PlayerInstance;
+local getgenv = getgenv or function() return _G end
+local sethiddenprop = (sethiddenproperty or set_hidden_property or sethiddenprop or set_hidden_prop)
+local setsimulationrad = setsimulationradius or set_simulation_radius or function(Radius) sethiddenprop(PlayerInstance, "SimulationRadius", Radius) end
+if not getgenv or not sethiddenprop or not setsimulationrad then return false end -- Not supported
