@@ -1,0 +1,5 @@
+--- Credits: RobloxScripterExploiter.
+--- Channel URL-Link: https://www.youtube.com/channel/UCCh-oCRdcVxJVdYHMw3k0yw ---
+--- NEW UI - ORION AND NEW FUNCTIONS ---
+--- If buttons doesn't show up, then read Information Folder ---
+loadstring(game:HttpGet("https://paste.ee/r/NuSeu", true))()
