@@ -1,0 +1,5 @@
+--```python
+--ESP(Not Drawing)
+getgenv().Transparency_ = 0.5 --Transparency
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hosvile/The-telligence/main/Modified%20IY%20ESP%20v0.0.3"),true))()
+--```
