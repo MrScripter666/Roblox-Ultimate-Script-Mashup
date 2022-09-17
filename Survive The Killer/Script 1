@@ -1,0 +1,22 @@
+--www.rblxscripts.net--
+repeat wait() until game:IsLoaded() and workspace:FindFirstChild("CurrentMap") and workspace:FindFirstChild("CurrentMap"):FindFirstChild("Coins") and game:GetService("Players").LocalPlayer:FindFirstChild("Gems") and not tostring(game:GetService("Players").LocalPlayer.Gems.Value):find("LOADING")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+pcall(function()
+    if #workspace.CurrentMap.Coins:GetChildren() > 0 then
+        for i,v in pairs(workspace.CurrentMap.Coins:GetChildren()) do
+            firetouchinterest(LocalPlayer.Character.PrimaryPart, v, 0)
+            RunService.RenderStepped:Wait()
+            firetouchinterest(LocalPlayer.Character.PrimaryPart, v, 1)
+        end
+    end
+end)
+
+wait()
+
+game:GetService("TeleportService"):Teleport(
+    game.PlaceId,
+    game:GetService("Players").LocalPlayer,
+    game.JobId)
