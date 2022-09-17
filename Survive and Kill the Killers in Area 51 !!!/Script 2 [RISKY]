@@ -1,0 +1,32 @@
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "ℹ",
+    Text = "By Squlera",
+    Duration = 5,
+})
+
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(183, 305, 184)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(136, 334, 501)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(115, 324, 676)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(320, 272, 140)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(3, 268, 187)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(-104, 313, 461)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(-155, 303, 768)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(233, 373, 49)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(148, 260, 326)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(157, 344, 607)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(-147, 313, 281)
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame = CFrame.new(326, 511, 392)
