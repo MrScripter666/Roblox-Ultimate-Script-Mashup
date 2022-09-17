@@ -1,0 +1,6 @@
+--click to tp
+local Imput = game:GetService("UserInputService")
+local Plr = game:service'Players'.LocalPlayer
+local Mouse = Plr:GetMouse()
+
+function To(position)
