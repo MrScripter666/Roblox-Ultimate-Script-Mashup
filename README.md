@@ -1,8 +1,12 @@
 # ROBLOX ULTIMATE SCRIPT MASHUP
 Scripts For Roblox                
 ---Status: WORKING
+
++1 Script every day.
+
+
 Applies to any exploit.
-Help: MrScripter666#7801
+Help and suggestions: MrScripter666#7801
 
 
 How to use:
