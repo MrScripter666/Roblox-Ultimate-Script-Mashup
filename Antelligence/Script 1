@@ -1,0 +1,4 @@
+--```python
+--Free-Cam
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hosvile/The-telligence/main/MC%3AFree-Cam%20v0.0.2"),true))()
+--```
