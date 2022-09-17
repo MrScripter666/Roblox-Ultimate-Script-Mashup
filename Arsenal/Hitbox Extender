@@ -1,0 +1,6 @@
+function getnames()
+    for i, v in pairs(game:GetChildren()) do
+        if v.ClassName == "Players" then
+            return v.Name
+        end
+    end
