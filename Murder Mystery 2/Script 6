@@ -1,0 +1,18 @@
+--Made by Centurian
+local players = game:GetService("Players")
+for _, v in pairs(players:GetPlayers()) do
+    if v.Character:FindFirstChild("Knife") or v.Backpack:FindFirstChild("Knife") then
+        warn("Murderer - " .. v.Name)
+        local x = Instance.new("Fire")
+        x.Color = Color3.fromRGB(255, 0, 0)
+        x.Parent = v.Character.Head
+    end
+    if v.Character:FindFirstChild("Gun") or v.Backpack:FindFirstChild("Gun") or v.Character:FindFirstChild("Revolver") or v.Backpack:FindFirstChild("Revolver") then
+        warn("Sheriff - " .. v.Name)
+        local x = Instance.new("Fire")
+        x.Color = Color3.fromRGB(0, 125, 125)
+        x.Parent = v.Character.Head
+    end
+end
+-- Wait for all weapons to be given. --
+-- This will print to output, press F9 to open dev. console --
