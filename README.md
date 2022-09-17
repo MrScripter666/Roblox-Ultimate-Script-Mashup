@@ -6,7 +6,7 @@ Scripts For Roblox
 
 
 Applies to any exploit.
-Help and suggestions: MrScripter666#7801
+Help and suggestions: MrScripter666#7801     or       Mr.Klein#3201
 
 
 How to use:
