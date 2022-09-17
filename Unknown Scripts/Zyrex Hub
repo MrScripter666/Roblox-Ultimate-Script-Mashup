@@ -1,0 +1,3 @@
+_G.Toggle_GUI = Enum.KeyCode.RightControl
+
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/NotZyrex/Zyrex-Hub/master/Main.lua"),true))()
