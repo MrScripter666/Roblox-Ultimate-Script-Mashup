@@ -1,0 +1,435 @@
+-- SUBSCRIBE TO CHANNEL "https://www.youtube.com/channel/UCHBxhQ_-wt-ZP3Exti78YGQ"
+-- GUI WAS MADE BY DINOSAUR XXX
+
+-- Functions
+
+local DoomspirebrickbattleGUI = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Fly = Instance.new("TextButton")
+local Name = Instance.new("TextLabel")
+local Invisible = Instance.new("TextButton")
+local InfiniteJump = Instance.new("TextButton")
+local BTools = Instance.new("TextButton")
+local Admin = Instance.new("TextButton")
+local SpectateGUI = Instance.new("TextButton")
+local Main2 = Instance.new("Frame")
+local Name_2 = Instance.new("TextLabel")
+local RedTeam = Instance.new("TextButton")
+local BlueTeam = Instance.new("TextButton")
+local YellowTeam = Instance.new("TextButton")
+local GreenTeam = Instance.new("TextButton")
+local Main3 = Instance.new("Frame")
+local Name_3 = Instance.new("TextLabel")
+local GUI = Instance.new("TextLabel")
+local Scripter = Instance.new("TextLabel")
+local Copy = Instance.new("TextButton")
+
+-- Scripts
+
+DoomspirebrickbattleGUI.Name = "Doomspire brickbattle GUI"
+DoomspirebrickbattleGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Main.Name = "Main"
+Main.Parent = DoomspirebrickbattleGUI
+Main.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Main.Position = UDim2.new(0.0901835635, 0, 0.104368925, 0)
+Main.Size = UDim2.new(0, 108, 0, 363)
+Main.Active = true
+Main.Draggable = true
+
+Fly.Name = "Fly"
+Fly.Parent = Main
+Fly.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0, 0, 0.181818187, 0)
+Fly.Size = UDim2.new(0, 108, 0, 50)
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.new(1, 0.333333, 0)
+Fly.TextScaled = true
+Fly.TextSize = 14
+Fly.TextWrapped = true
+Fly.MouseButton1Down:connect(function()
+	repeat wait()
+  until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+local mouse = game.Players.LocalPlayer:GetMouse()
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer
+local torso = plr.Character.Torso
+local flying = true
+local deb = true
+local ctrl = {f = 0, b = 0, l = 0, r = 0}
+local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+local maxspeed = 50
+local speed = 0
+
+function Fly()
+local bg = Instance.new("BodyGyro", torso)
+bg.P = 9e4
+bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+bg.cframe = torso.CFrame
+local bv = Instance.new("BodyVelocity", torso)
+bv.velocity = Vector3.new(0,0.1,0)
+bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+repeat wait()
+plr.Character.Humanoid.PlatformStand = true
+if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+speed = speed+.5+(speed/maxspeed)
+if speed > maxspeed then
+speed = maxspeed
+end
+elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+speed = speed-1
+if speed < 0 then
+speed = 0
+end
+end
+if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+else
+bv.velocity = Vector3.new(0,0.1,0)
+end
+bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+until not flying
+ctrl = {f = 0, b = 0, l = 0, r = 0}
+lastctrl = {f = 0, b = 0, l = 0, r = 0}
+speed = 0
+bg:Destroy()
+bv:Destroy()
+plr.Character.Humanoid.PlatformStand = false
+end
+mouse.KeyDown:connect(function(key)
+if key:lower() == "e" then
+if flying then flying = false
+else
+flying = true
+Fly()
+end
+elseif key:lower() == "w" then
+ctrl.f = 1
+elseif key:lower() == "s" then
+ctrl.b = -1
+elseif key:lower() == "a" then
+ctrl.l = -1
+elseif key:lower() == "d" then
+ctrl.r = 1
+end
+end)
+mouse.KeyUp:connect(function(key)
+if key:lower() == "w" then
+ctrl.f = 0
+elseif key:lower() == "s" then
+ctrl.b = 0
+elseif key:lower() == "a" then
+ctrl.l = 0
+elseif key:lower() == "d" then
+ctrl.r = 0
+end
+end)
+Fly()
+end)
+
+Name.Name = "Name"
+Name.Parent = Main
+Name.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Name.BorderSizePixel = 0
+Name.Size = UDim2.new(0, 108, 0, 50)
+Name.Font = Enum.Font.Highway
+Name.Text = "Fuctions"
+Name.TextColor3 = Color3.new(1, 0.666667, 0.498039)
+Name.TextScaled = true
+Name.TextSize = 14
+Name.TextWrapped = true
+
+Invisible.Name = "Invisible"
+Invisible.Parent = Main
+Invisible.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Invisible.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Invisible.BorderSizePixel = 0
+Invisible.Position = UDim2.new(0, 0, 0.319559216, 0)
+Invisible.Size = UDim2.new(0, 108, 0, 50)
+Invisible.Text = "Invisible"
+Invisible.TextColor3 = Color3.new(1, 0.333333, 0)
+Invisible.TextScaled = true
+Invisible.TextSize = 14
+Invisible.TextWrapped = true
+Invisible.MouseButton1Down:connect(function()
+	local player = game.Players.LocalPlayer
+position     = player.Character.HumanoidRootPart.Position
+wait(0.1)
+player.Character:MoveTo(position + Vector3.new(0, 1000000, 0))
+wait(0.1)
+humanoidrootpart = player.Character.HumanoidRootPart:clone()
+wait(0.1)
+player.Character.HumanoidRootPart:Destroy()
+humanoidrootpart.Parent = player.Character
+player.Character:MoveTo(position)
+wait()
+-- Remove this if you want to see yourself (others still won't see you)
+game.Players.LocalPlayer.Character.Torso.Transparency = 1
+game.Players.LocalPlayer.Character.Head.Transparency  = 1
+game.Players.LocalPlayer.Character["Left Arm"].Transparency = 1
+game.Players.LocalPlayer.Character["Right Arm"].Transparency = 1
+game.Players.LocalPlayer.Character["Left Leg"].Transparency = 1
+game.Players.LocalPlayer.Character["Right Leg"].Transparency = 1
+game.Players.LocalPlayer.Character.Humanoid:RemoveAccessories()
+game.Players.LocalPlayer.Character.Head.face:Remove()
+end)
+
+InfiniteJump.Name = "Infinite Jump"
+InfiniteJump.Parent = Main
+InfiniteJump.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+InfiniteJump.BorderSizePixel = 0
+InfiniteJump.Position = UDim2.new(0, 0, 0.446280986, 0)
+InfiniteJump.Size = UDim2.new(0, 108, 0, 50)
+InfiniteJump.Text = "Infinite Jump"
+InfiniteJump.TextColor3 = Color3.new(1, 0.333333, 0)
+InfiniteJump.TextScaled = true
+InfiniteJump.TextSize = 14
+InfiniteJump.TextWrapped = true
+InfiniteJump.MouseButton1Down:connect(function()
+	local Player = game:GetService'Players'.LocalPlayer;
+local UIS = game:GetService'UserInputService';
+
+_G.JumpHeight = 50;
+
+function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+UIS.InputBegan:connect(function(UserInput)
+    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+        Action(Player.Character.Humanoid, function(self)
+            if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+                Action(self.Parent.HumanoidRootPart, function(self)
+                    self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+                end)
+            end
+        end)
+    end
+end)
+end)
+
+BTools.Name = "BTools"
+BTools.Parent = Main
+BTools.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+BTools.BorderSizePixel = 0
+BTools.Position = UDim2.new(0, 0, 0.584022045, 0)
+BTools.Size = UDim2.new(0, 108, 0, 50)
+BTools.Text = "BTools"
+BTools.TextColor3 = Color3.new(1, 0.333333, 0)
+BTools.TextScaled = true
+BTools.TextSize = 14
+BTools.TextWrapped = true
+BTools.MouseButton1Down:connect(function()
+	local a=Instance.new("Tool")a.RequiresHandle=false;a.Name="Delete"local b=game.Players.LocalPlayer;a.Parent=b:WaitForChild("Backpack")local c=b:GetMouse()local d=false;local e=Instance.new("SelectionBox")e.Color3=Color3.new(0,0.6,0.6,6)e.Parent=b.PlayerGui;local c=b:GetMouse()local e=Instance.new("SelectionBox")e.Color3=Color3.new(0,0.6,0.6,6)e.Parent=b.PlayerGui;e.Name="derp"c.Move:connect(function()if d then local f=c.Target;if not f then e.Adornee=nil else if f:IsA("BasePart")then e.Adornee=f else e.Adornee=nil end end end end)a.Equipped:Connect(function()d=true end)a.Unequipped:Connect(function()e.Adornee=nil;d=false end)a.Activated:Connect(function()if e.Adornee then local g=Instance.new("Explosion")g.Parent=game.Workspace;g.Position=e.Adornee.Position;g.BlastPressure=0;local h=Instance.new("Sound")h.SoundId="http://www.roblox.com/asset/?id=315775189"h.Parent=game.Workspace;h:Play()e.Adornee:Destroy()e.Adornee=nil end end)
+end)
+
+Admin.Name = "Admin"
+Admin.Parent = Main
+Admin.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Admin.BorderSizePixel = 0
+Admin.Position = UDim2.new(0, 0, 0.721763074, 0)
+Admin.Size = UDim2.new(0, 108, 0, 50)
+Admin.Text = "Infinite Yield"
+Admin.TextColor3 = Color3.new(1, 0.333333, 0)
+Admin.TextScaled = true
+Admin.TextSize = 14
+Admin.TextWrapped = true
+Admin.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+SpectateGUI.Name = "Spectate GUI"
+SpectateGUI.Parent = Main
+SpectateGUI.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+SpectateGUI.BorderSizePixel = 0
+SpectateGUI.Position = UDim2.new(0, 0, 0.862258911, 0)
+SpectateGUI.Size = UDim2.new(0, 108, 0, 50)
+SpectateGUI.Text = "Spectate GUI"
+SpectateGUI.TextColor3 = Color3.new(1, 0.333333, 0)
+SpectateGUI.TextScaled = true
+SpectateGUI.TextSize = 14
+SpectateGUI.TextWrapped = true
+SpectateGUI.MouseButton1Down:connect(function()
+	gui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+nextb = Instance.new("TextButton", gui)
+nextb.Position = UDim2.new(0.88,0,0.9,0)
+nextb.Size = UDim2.new(0.1,0,0.07,0)
+nextb.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+nextb.Text = "Next"
+prevb = nextb:Clone()
+prevb.Position = UDim2.new(0.02,0,0.9,0)
+prevb.Text = "Previous"
+prevb.Parent = gui
+plrNum = 1
+for i,v in pairs(game.Players:GetPlayers()) do
+if i == plrNum then
+game.Workspace.Camera.CameraSubject = v.Character.Humanoid
+end
+end
+ 
+prevb.MouseButton1Down:connect(function()
+if plrNum ~= 1 then
+plrNum = plrNum - 1
+end
+for i,v in pairs(game.Players:GetPlayers()) do
+if i == plrNum then
+game.Workspace.Camera.CameraSubject = v.Character.Humanoid
+end
+end
+end)
+ 
+nextb.MouseButton1Down:connect(function()
+if plrNum < #game.Players:GetPlayers() then
+plrNum = plrNum + 1
+for i,v in pairs(game.Players:GetPlayers()) do
+if i == plrNum then
+game.Workspace.Camera.CameraSubject = v.Character.Humanoid
+end
+end
+end
+end)
+end)
+
+Main2.Name = "Main2"
+Main2.Parent = DoomspirebrickbattleGUI
+Main2.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Main2.Position = UDim2.new(0.323224276, 0, 0.148058251, 0)
+Main2.Size = UDim2.new(0, 109, 0, 262)
+Main2.Active = true
+Main2.Draggable = true
+
+Name_2.Name = "Name"
+Name_2.Parent = Main2
+Name_2.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Name_2.BorderSizePixel = 0
+Name_2.Size = UDim2.new(0, 107, 0, 50)
+Name_2.Font = Enum.Font.Highway
+Name_2.Text = "Teleports"
+Name_2.TextColor3 = Color3.new(1, 0.666667, 1)
+Name_2.TextScaled = true
+Name_2.TextSize = 14
+Name_2.TextWrapped = true
+
+RedTeam.Name = "Red Team"
+RedTeam.Parent = Main2
+RedTeam.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+RedTeam.BorderSizePixel = 0
+RedTeam.Position = UDim2.new(0, 0, 0.190839693, 0)
+RedTeam.Size = UDim2.new(0, 107, 0, 50)
+RedTeam.Text = "Teleport to Red Team"
+RedTeam.TextColor3 = Color3.new(1, 0, 0)
+RedTeam.TextScaled = true
+RedTeam.TextSize = 14
+RedTeam.TextWrapped = true
+RedTeam.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-138, 30, -7)
+end)
+
+BlueTeam.Name = "Blue Team"
+BlueTeam.Parent = Main2
+BlueTeam.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+BlueTeam.BorderSizePixel = 0
+BlueTeam.Position = UDim2.new(0, 0, 0.381679386, 0)
+BlueTeam.Size = UDim2.new(0, 107, 0, 50)
+BlueTeam.Text = "Teleport to Blue Team"
+BlueTeam.TextColor3 = Color3.new(0, 0, 1)
+BlueTeam.TextScaled = true
+BlueTeam.TextSize = 14
+BlueTeam.TextWrapped = true
+BlueTeam.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6, 27, 124)
+end)
+
+YellowTeam.Name = "Yellow Team"
+YellowTeam.Parent = Main2
+YellowTeam.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+YellowTeam.BorderSizePixel = 0
+YellowTeam.Position = UDim2.new(0, 0, 0.572519064, 0)
+YellowTeam.Size = UDim2.new(0, 107, 0, 50)
+YellowTeam.Font = Enum.Font.Highway
+YellowTeam.Text = "Teleport to Yellow Team"
+YellowTeam.TextColor3 = Color3.new(1, 1, 0)
+YellowTeam.TextScaled = true
+YellowTeam.TextSize = 14
+YellowTeam.TextWrapped = true
+YellowTeam.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120, 27, -2)
+end)
+
+GreenTeam.Name = "Green Team"
+GreenTeam.Parent = Main2
+GreenTeam.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+GreenTeam.BorderSizePixel = 0
+GreenTeam.Position = UDim2.new(0, 0, 0.763358772, 0)
+GreenTeam.Size = UDim2.new(0, 107, 0, 62)
+GreenTeam.Text = "Teleport to Green Team"
+GreenTeam.TextColor3 = Color3.new(0, 1, 0)
+GreenTeam.TextScaled = true
+GreenTeam.TextSize = 14
+GreenTeam.TextWrapped = true
+GreenTeam.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7, 31, -125)
+end)
+
+Main3.Name = "Main3"
+Main3.Parent = DoomspirebrickbattleGUI
+Main3.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Main3.Position = UDim2.new(0.576217175, 0, 0.148058251, 0)
+Main3.Size = UDim2.new(0, 108, 0, 291)
+Main3.Active = true
+Main3.Draggable = true
+
+Name_3.Name = "Name"
+Name_3.Parent = Main3
+Name_3.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Name_3.BorderSizePixel = 0
+Name_3.Size = UDim2.new(0, 108, 0, 50)
+Name_3.Font = Enum.Font.Highway
+Name_3.Text = "Credits"
+Name_3.TextColor3 = Color3.new(0, 1, 1)
+Name_3.TextScaled = true
+Name_3.TextSize = 14
+Name_3.TextWrapped = true
+
+GUI.Name = "GUI"
+GUI.Parent = Main3
+GUI.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+GUI.BorderSizePixel = 0
+GUI.Position = UDim2.new(0, 0, 0.226804122, 0)
+GUI.Size = UDim2.new(0, 108, 0, 50)
+GUI.Font = Enum.Font.Highway
+GUI.Text = "GUI: Dinosaur XxX"
+GUI.TextColor3 = Color3.new(0.666667, 0.333333, 1)
+GUI.TextScaled = true
+GUI.TextSize = 14
+GUI.TextWrapped = true
+
+Scripter.Name = "Scripter"
+Scripter.Parent = Main3
+Scripter.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Scripter.BorderSizePixel = 0
+Scripter.Position = UDim2.new(0, 0, 0.484536082, 0)
+Scripter.Size = UDim2.new(0, 108, 0, 50)
+Scripter.Font = Enum.Font.Highway
+Scripter.Text = "Scripter: Dinosaur XxX"
+Scripter.TextColor3 = Color3.new(0.666667, 0.333333, 1)
+Scripter.TextScaled = true
+Scripter.TextSize = 14
+Scripter.TextWrapped = true
+
+Copy.Name = "Copy"
+Copy.Parent = Main3
+Copy.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+Copy.BorderSizePixel = 0
+Copy.Position = UDim2.new(0, 0, 0.800687313, 0)
+Copy.Size = UDim2.new(0, 108, 0, 58)
+Copy.Text = "Copy YouTube Dinosaur XxX"
+Copy.TextColor3 = Color3.new(0.666667, 0.333333, 1)
+Copy.TextScaled = true
+Copy.TextSize = 14
+Copy.TextWrapped = true
+Copy.MouseButton1Down:connect(function()
+	setclipboard("https://www.youtube.com/channel/UCHBxhQ_-wt-ZP3Exti78YGQ")
+end)
