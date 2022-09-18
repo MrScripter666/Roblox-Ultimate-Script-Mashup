@@ -1,11 +1,19 @@
-# ---Status: WORKING
+# Status
+|Conected|Working|Updated|
+|--------|-------|-------|
+|  :white_check_mark:   | :white_check_mark: | :white_check_mark:|
 
 ## WORKING ON A NEW EXPLOIT!!!!!!
 
 ### Exploit name: TOR
 ### Device: PC
 ### Level: 8
+### Key: Yes
 
+## Project:
+- [ ] Create an Exploit for PC device
+- [ ] Create an Exploit for Mobile device
+- [ ] Create an Exploit for MAC device
 
 
 ### Developers:
