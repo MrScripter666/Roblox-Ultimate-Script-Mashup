@@ -56,6 +56,7 @@ Credits to:
 
 MrScripter666      (Owner)
 Mr.Klein           (Owner)
+Jose David         (Admin)
 Bacon Hub 
 Coco Hub
 Dark Hub
@@ -68,3 +69,4 @@ Owl Hub
 Oxie Hub
 Topkek Hub
 *And MANY more.
+
