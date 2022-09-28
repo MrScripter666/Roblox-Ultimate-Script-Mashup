@@ -1,7 +1,7 @@
 # Status
 |Conected|Working|Updated|
 |--------|-------|-------|
-|  :white_check_mark:   | :white_check_mark: | :white_check_mark:|
+|  :x:   | :x: | :x:|
 ## WORKING ON A NEW EXPLOIT!!!!!!
 
 ### Exploit name: TOR
