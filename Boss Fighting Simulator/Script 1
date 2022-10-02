@@ -1,0 +1,410 @@
+local DS = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local TitleFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local AutoAttack = Instance.new("TextButton")
+local AutoSell = Instance.new("TextButton")
+local GodMode = Instance.new("TextButton")
+local Noob = Instance.new("TextButton")
+local Knight = Instance.new("TextButton")
+local Orc = Instance.new("TextButton")
+local Wizard = Instance.new("TextButton")
+local Pirate = Instance.new("TextButton")
+local Ninja = Instance.new("TextButton")
+local Undead = Instance.new("TextButton")
+local IceKing = Instance.new("TextButton")
+local Zeus = Instance.new("TextButton")
+local Black = Instance.new("TextButton")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+DS.Name = "DS"
+DS.Parent = game.CoreGui
+DS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = DS
+MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.Position = UDim2.new(0.272222191, 0, 0.217391297, 0)
+MainFrame.Size = UDim2.new(0, 409, 0, 287)
+MainFrame.Visible = false
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+Close.Name = "Close"
+Close.Parent = MainFrame
+Close.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.939603925, 0, 0, 0)
+Close.Size = UDim2.new(0, 25, 0, 25)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.MouseButton1Down:connect(function()
+OpenFrame.Visible = true
+MainFrame.Visible = false
+end)
+
+TitleFrame.Name = "TitleFrame"
+TitleFrame.Parent = MainFrame
+TitleFrame.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+TitleFrame.BorderSizePixel = 0
+TitleFrame.Size = UDim2.new(0, 358, 0, 25)
+
+Title.Name = "Title"
+Title.Parent = TitleFrame
+Title.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 385, 0, 25)
+Title.Font = Enum.Font.ArialBold
+Title.Text = "Boss Fucc.... Simulator"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 25.000
+Title.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = TitleFrame
+Credits.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0, 0, 10.7600002, 0)
+Credits.Size = UDim2.new(0, 409, 0, 18)
+Credits.Font = Enum.Font.ArialBold
+Credits.Text = "Scriptz by GoldenScriptz , Gui by DukyBG"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 25.000
+Credits.TextWrapped = true
+
+AutoAttack.Name = "Auto Attack"
+AutoAttack.Parent = MainFrame
+AutoAttack.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+AutoAttack.BorderSizePixel = 0
+AutoAttack.Position = UDim2.new(0.0220264308, 0, 0.108013935, 0)
+AutoAttack.Size = UDim2.new(0, 134, 0, 34)
+AutoAttack.Font = Enum.Font.SourceSansBold
+AutoAttack.Text = "Auto Attack"
+AutoAttack.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoAttack.TextScaled = true
+AutoAttack.TextSize = 14.000
+AutoAttack.TextWrapped = true
+
+AutoSell.Name = "Auto Sell"
+AutoSell.Parent = MainFrame
+AutoSell.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+AutoSell.BorderSizePixel = 0
+AutoSell.Position = UDim2.new(0.369958282, 0, 0.108013935, 0)
+AutoSell.Size = UDim2.new(0, 116, 0, 34)
+AutoSell.Font = Enum.Font.SourceSansBold
+AutoSell.Text = "Auto Sell"
+AutoSell.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoSell.TextScaled = true
+AutoSell.TextSize = 14.000
+AutoSell.TextWrapped = true
+
+GodMode.Name = " DONT KLICK OR U GET KICKED"
+GodMode.Parent = MainFrame
+GodMode.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+GodMode.BorderSizePixel = 0
+GodMode.Position = UDim2.new(0.674094558, 0, 0.108013935, 0)
+GodMode.Size = UDim2.new(0, 124, 0, 34)
+GodMode.Font = Enum.Font.SourceSansBold
+GodMode.Text = "GOD MODE"
+GodMode.TextColor3 = Color3.fromRGB(0, 0, 0)
+GodMode.TextScaled = true
+GodMode.TextSize = 14.000
+GodMode.TextWrapped = true
+
+Noob.Name = "Noob"
+Noob.Parent = MainFrame
+Noob.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Noob.BorderSizePixel = 0
+Noob.Position = UDim2.new(0.0220264308, 0, 0.247386754, 0)
+Noob.Size = UDim2.new(0, 134, 0, 34)
+Noob.Font = Enum.Font.SourceSansBold
+Noob.Text = "Noob Arena"
+Noob.TextColor3 = Color3.fromRGB(0, 0, 0)
+Noob.TextScaled = true
+Noob.TextSize = 14.000
+Noob.TextWrapped = true
+
+Knight.Name = "Knight"
+Knight.Parent = MainFrame
+Knight.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Knight.BorderSizePixel = 0
+Knight.Position = UDim2.new(0.0220264308, 0, 0.386759579, 0)
+Knight.Size = UDim2.new(0, 134, 0, 34)
+Knight.Font = Enum.Font.SourceSansBold
+Knight.Text = "Knight Arena"
+Knight.TextColor3 = Color3.fromRGB(0, 0, 0)
+Knight.TextScaled = true
+Knight.TextSize = 14.000
+Knight.TextWrapped = true
+
+Orc.Name = "Orc"
+Orc.Parent = MainFrame
+Orc.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Orc.BorderSizePixel = 0
+Orc.Position = UDim2.new(0.0220264308, 0, 0.529616714, 0)
+Orc.Size = UDim2.new(0, 134, 0, 34)
+Orc.Font = Enum.Font.SourceSansBold
+Orc.Text = "Orc Arena"
+Orc.TextColor3 = Color3.fromRGB(0, 0, 0)
+Orc.TextScaled = true
+Orc.TextSize = 14.000
+Orc.TextWrapped = true
+
+Wizard.Name = "Wizard"
+Wizard.Parent = MainFrame
+Wizard.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Wizard.BorderSizePixel = 0
+Wizard.Position = UDim2.new(0.0220264308, 0, 0.675958157, 0)
+Wizard.Size = UDim2.new(0, 134, 0, 34)
+Wizard.Font = Enum.Font.SourceSansBold
+Wizard.Text = "Wizard Arena"
+Wizard.TextColor3 = Color3.fromRGB(0, 0, 0)
+Wizard.TextScaled = true
+Wizard.TextSize = 14.000
+Wizard.TextWrapped = true
+
+Pirate.Name = "Pirate"
+Pirate.Parent = MainFrame
+Pirate.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Pirate.BorderSizePixel = 0
+Pirate.Position = UDim2.new(0.369214714, 0, 0.247386754, 0)
+Pirate.Size = UDim2.new(0, 116, 0, 34)
+Pirate.Font = Enum.Font.SourceSansBold
+Pirate.Text = "Pirate Arena"
+Pirate.TextColor3 = Color3.fromRGB(0, 0, 0)
+Pirate.TextScaled = true
+Pirate.TextSize = 14.000
+Pirate.TextWrapped = true
+
+Ninja.Name = "Ninja"
+Ninja.Parent = MainFrame
+Ninja.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Ninja.BorderSizePixel = 0
+Ninja.Position = UDim2.new(0.369214714, 0, 0.386759579, 0)
+Ninja.Size = UDim2.new(0, 116, 0, 34)
+Ninja.Font = Enum.Font.SourceSansBold
+Ninja.Text = "Ninja lol"
+Ninja.TextColor3 = Color3.fromRGB(0, 0, 0)
+Ninja.TextScaled = true
+Ninja.TextSize = 14.000
+Ninja.TextWrapped = true
+
+Undead.Name = "Undead"
+Undead.Parent = MainFrame
+Undead.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Undead.BorderSizePixel = 0
+Undead.Position = UDim2.new(0.369214714, 0, 0.529616714, 0)
+Undead.Size = UDim2.new(0, 116, 0, 34)
+Undead.Font = Enum.Font.SourceSansBold
+Undead.Text = "Undead Arena"
+Undead.TextColor3 = Color3.fromRGB(0, 0, 0)
+Undead.TextScaled = true
+Undead.TextSize = 14.000
+Undead.TextWrapped = true
+
+IceKing.Name = "IceKing"
+IceKing.Parent = MainFrame
+IceKing.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+IceKing.BorderSizePixel = 0
+IceKing.Position = UDim2.new(0.369214714, 0, 0.675958216, 0)
+IceKing.Size = UDim2.new(0, 116, 0, 34)
+IceKing.Font = Enum.Font.SourceSansBold
+IceKing.Text = "IceKing Arena"
+IceKing.TextColor3 = Color3.fromRGB(0, 0, 0)
+IceKing.TextScaled = true
+IceKing.TextSize = 14.000
+IceKing.TextWrapped = true
+
+Zeus.Name = "Zeus"
+Zeus.Parent = MainFrame
+Zeus.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Zeus.BorderSizePixel = 0
+Zeus.Position = UDim2.new(0.672393203, 0, 0.247386754, 0)
+Zeus.Size = UDim2.new(0, 124, 0, 34)
+Zeus.Font = Enum.Font.SourceSansBold
+Zeus.Text = "Zeus Arena"
+Zeus.TextColor3 = Color3.fromRGB(0, 0, 0)
+Zeus.TextScaled = true
+Zeus.TextSize = 14.000
+Zeus.TextWrapped = true
+
+Black.Name = "Black"
+Black.Parent = MainFrame
+Black.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Black.BorderSizePixel = 0
+Black.Position = UDim2.new(0.672393203, 0, 0.386759579, 0)
+Black.Size = UDim2.new(0, 124, 0, 34)
+Black.Font = Enum.Font.SourceSansBold
+Black.Text = "BLACK Arena"
+Black.TextColor3 = Color3.fromRGB(0, 0, 0)
+Black.TextScaled = true
+Black.TextSize = 14.000
+Black.TextWrapped = true
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = DS
+OpenFrame.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+OpenFrame.BorderSizePixel = 0
+OpenFrame.Position = UDim2.new(0, 0, 0.341137111, 0)
+OpenFrame.Size = UDim2.new(0, 48, 0, 29)
+Open.MouseButton1Down:connect(function()
+MainFrame.Visible = true
+OpenFrame.Visible = false
+end)
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Open.BorderSizePixel = 0
+Open.Size = UDim2.new(0, 48, 0, 29)
+Open.Font = Enum.Font.ArialBold
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+
+
+
+
+-- Scirptz
+
+AutoAttack.MouseButton1Down:connect(function()
+	while true do wait()
+local hit = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+hit.Attack:FireServer()
+hit:Activate()
+end
+end)
+
+AutoSell.MouseButton1Down:connect(function()
+while wait(.1) do
+local Target = game:GetService("ReplicatedStorage").Remotes.SellPower;
+Target:InvokeServer();
+end
+end)
+
+GodMode.MouseButton1Down:connect(function()
+	game.StarterGui:SetCore("SendNotification", {
+	Title = "🤡";
+	Text = "TUN TUN TUUUUUUN";
+	Icon = "";
+	Duration = 5;
+})	
+while true do
+wait()
+game.ReplicatedStorage.Remotes.SelfDamage:FireServer(-math.huge)
+end
+end)
+
+Noob.MouseButton1Down:connect(function()
+	debounce = false
+game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.NoobArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.NoobArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-8,2)
+        debounce = false
+    end
+end)
+end)
+
+Zeus.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.ZeusArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.ZeusArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
+
+Wizard.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.WizardArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.WizardArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
+
+Knight.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.KnightArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.KnightArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
+
+Orc.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.OrcArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.OrcArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
+
+Pirate.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.PirateArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.PirateArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
+
+IceKing.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.IceKingArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.IceKingArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
+
+Ninja.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.NinjaArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.NinjaArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
+
+Undead.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.UndeadArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.UndeadArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
+
+Black.MouseButton1Down:connect(function()
+	game:GetService('RunService').Stepped:connect(function()
+    if debounce == false and game.Workspace.Arenas.BlackKnightArena.Boss:FindFirstChildWhichIsA("Model") then
+        debounce = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arenas.BlackKnightArena.Boss:FindFirstChildWhichIsA("Model").UpperTorso.CFrame * CFrame.new(0,-10,2)
+        debounce = false
+    end
+end)
+end)
