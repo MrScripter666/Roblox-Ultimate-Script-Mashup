@@ -1,0 +1,10 @@
+money = 9e16             
+--Execute and collect your cash from the cash collector.
+--FrostHook
+local number_1 = money;
+local Target = game:GetService("ReplicatedStorage").RespawnService;
+Target:FireServer(number_1);
+
+-- thank me for not making you go through linkvertise/mboost :) consider subscribing :)
+-- youtube.com/VapourYT
+-- vapouryt.co.uk
